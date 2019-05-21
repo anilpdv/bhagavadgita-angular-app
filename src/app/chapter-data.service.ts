@@ -8,17 +8,16 @@ import { Verse } from './components/verses/verse.model';
   providedIn: 'root'
 })
 export class ChapterDataService {
+  private BaseUrl = 'http://api.bhagavadgita.ml';
   constructor(private http: HttpClient) {}
   private chapters: Chapter[] = [];
   private chapterUpdate = new Subject<Chapter[]>();
 
   getChapters() {
-    this.http
-      .get<{ data: Chapter[] }>('http://localhost:3001/')
-      .subscribe(result => {
-        this.chapters = result.data;
-        this.chapterUpdate.next([...this.chapters]);
-      });
+    this.http.get<{ data: Chapter[] }>(`${this.BaseUrl}/`).subscribe(result => {
+      this.chapters = result.data;
+      this.chapterUpdate.next([...this.chapters]);
+    });
   }
 
   getChapterUpdateListener() {
@@ -27,13 +26,13 @@ export class ChapterDataService {
 
   getChapter(id: string) {
     return this.http.get<{ data: Chapter }>(
-      'http://localhost:3001/chapter/show/' + id
+      `${this.BaseUrl}/chapter/show/` + id
     );
   }
 
   getVerses(chapterId: string) {
     return this.http.get<{ data: Verse[] }>(
-      `http://localhost:3001/chapter/show/${chapterId}/verses`
+      `${this.BaseUrl}/chapter/show/${chapterId}/verses`
     );
   }
 }

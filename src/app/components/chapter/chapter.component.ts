@@ -21,7 +21,6 @@ export class ChapterComponent implements OnInit {
       if (paramMap.has('id')) {
         this.id = paramMap.get('id');
         this.chapterService.getChapter(this.id).subscribe(result => {
-          console.log(result);
           this.chapter = result.data;
         });
       }

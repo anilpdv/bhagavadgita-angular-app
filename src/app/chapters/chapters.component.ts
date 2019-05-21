@@ -17,7 +17,6 @@ export class ChaptersComponent implements OnInit, OnDestroy {
     this.chapterService.getChapters();
     this.chapterSub = this.chapterService.getChapterUpdateListener().subscribe(
       (chapters: Chapter[]) => {
-        console.log(chapters);
         this.chapters = chapters;
       },
       err => {
