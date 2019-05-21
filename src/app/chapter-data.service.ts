@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Chapter } from './components/chapter/chapter.model';
-import { Subject } from 'rxjs';
-import { Verse } from './components/verses/verse.model';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Chapter } from "./components/chapter/chapter.model";
+import { Subject } from "rxjs";
+import { Verse } from "./components/verses/verse.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ChapterDataService {
-  private BaseUrl = 'http://api.bhagavadgita.ml';
+  private BaseUrl = "https://lit-lowlands-63383.herokuapp.com";
   constructor(private http: HttpClient) {}
   private chapters: Chapter[] = [];
   private chapterUpdate = new Subject<Chapter[]>();
