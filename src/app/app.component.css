@@ -1,0 +1,47 @@
+nav {
+  max-width: 10rem;
+  background: #112d4e;
+}
+
+.main-container {
+  background: #fafafa;
+}
+
+.icon {
+  font-weight: bold;
+}
+
+.icon-title {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  background: #ff8246;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+.image-title {
+  width: 50%;
+  margin-left: 40px;
+}
+
+clr-icon {
+  color: white;
+  font-size: 200px;
+}
+
+section.navigation {
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 19px !important;
+  margin: 17px 0px;
+  padding: 20px;
+  text-align: left;
+}
+
+.nav-link:hover {
+  color: #112d4e !important;
+  background: #fafafa;
+}

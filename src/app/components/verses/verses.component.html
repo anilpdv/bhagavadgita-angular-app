@@ -1,0 +1,23 @@
+<div class="container text-center" *ngIf="verses">
+  <div class="title">
+    <span>verse {{verse.verse_number}}
+    </span>
+  </div>
+  <hr>
+  <div class="content">
+    <div class="text">
+      {{verse.text}}
+
+    </div>
+    <hr>
+    <div class="meaning">
+      {{verse.meaning}}
+    </div>
+    <span class="button-left btn btn-success-outline" (click)="prevHandler()">
+      prev
+    </span>
+    <button class="button-right btn btn-success-outline" (click)="nextHandler()" [disabled]="disableButton">
+      next
+    </button>
+  </div>
+</div>

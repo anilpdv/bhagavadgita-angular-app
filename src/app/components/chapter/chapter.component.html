@@ -1,0 +1,22 @@
+  <div class="container text-center" *ngIf="chapter">
+    <div class="title">
+      <span>
+
+        {{chapter.chapter_number}} .
+        {{chapter.name_meaning.split('"').join('')}}
+      </span>
+    </div>
+    <hr />
+    <div class="summary">
+      {{chapter.chapter_summary}}
+    </div>
+    <div class="verses_count" *ngIf="chapter">
+      <a [routerLink]="['/chapter',chapter.chapter_number,'verses']" class=" btn btn-success-outline">
+        Verses <span class="badge badge-4">
+          {{chapter.verses_count}}
+        </span>
+      </a>
+
+    </div>
+
+  </div>

@@ -1,0 +1,31 @@
+.title {
+  font-size: 1.5rem;
+  margin: 20px 10px;
+  line-height: 1.2;
+  padding: 20px;
+  font-family: Montserrat;
+  color: #000000;
+}
+
+.summary {
+  font-size: 20px;
+  word-spacing: 6px;
+  line-height: 1.7;
+  padding: 20px;
+  font-family: Lato;
+  color: #737373;
+}
+
+hr {
+  border-top: dotted 1px #eeeeee;
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+
+}
+
+.verses_count {
+  margin-top: 20px;
+}

@@ -1,0 +1,54 @@
+.row-margin {
+  margin: 0 20px;
+}
+
+.col-pad {
+  padding: 20px;
+  display: flex;
+}
+
+.card-title {
+  font-size: 20px;
+  word-spacing: 5px;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.card-text {
+  font-size: 17px;
+  word-spacing: 5px;
+  line-height: 1.7;
+  margin: auto;
+}
+
+hr {
+  border-top: dotted 1px #eeeeee;
+  margin: 10px 0;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+a {
+  color: #3f72af;
+}
+
+.card {}
+
+h4 {
+  font-family: Montserrat;
+  color: #000000;
+}
+
+
+p {
+  font-family: Lato;
+  color: #737373;
+}
+
+a {
+  font-family: Lato !important;
+  margin: auto;
+  text-decoration: none;
+}
