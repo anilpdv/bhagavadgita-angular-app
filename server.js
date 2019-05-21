@@ -7,5 +7,7 @@ app.use(express.static(__dirname + "/dist/bhagavadhgita-app"));
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname + "/dist/bhagavadhgita-app/index.html"));
 });
-
-app.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log("app is started listening to port : " + port);
+});
